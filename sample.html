@@ -1,0 +1,255 @@
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+.sample {
+    width: 500px;
+    margin: 10px;
+    padding: 10px;
+    border: #ccc solid 1px;
+}
+.sample p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.ex1 p {
+    text-indent: -1em;
+    margin-left: 1em;
+}
+.ex2 p {
+    text-indent: -1em;
+    margin-left: 1em;
+}
+.ex2 p span {
+    display: inline-block;
+    width: 1em;
+    text-indent: 0;
+}
+.ex3 p {
+    text-indent: -1em;
+    margin-left: 1em;
+}
+.ex3 p:before {
+    content: '※';
+}
+.ex4 p {
+    text-indent: -1em;
+    margin-left: 1em;
+}
+.ex4 p:before {
+    content: '*';
+    display: inline-block;
+    width: 1em;
+    text-indent: 0;
+}
+.ex5 p {
+    text-indent: -1em;
+    margin-left: 1em;
+}
+.ex5 p:before {
+    content: '\00270c';
+    display: inline-block;
+    width: 1em;
+    text-indent: 0;
+}
+.ex6 p {
+    text-indent: -1em;
+    margin-left: 1em;
+}
+.ex6 p:before {
+    content: '\0f0a1';
+    display: inline-block;
+    width: 1em;
+    color: #00f;
+    font-family: 'FontAwesome';
+    text-indent: 0;
+}
+.ex7 p {
+    text-indent: -1em;
+    margin-left: 1em;
+}
+.ex7 p:before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-right: 4px;
+    margin-left: 4px;
+    border: transparent solid 5px;
+    border-left-color: #f00;
+    vertical-align: 4px;
+}
+.ex8 p {
+    text-indent: -1em;
+    margin-left: 1em;
+}
+.ex8 p:before {
+    content: '';
+    display: inline-block;
+    width: .5em;
+    height: .5em;
+    margin-right: .5em;
+    background: #f00;
+    transform: rotate(45deg);
+    vertical-align: 2px;
+}
+.ex9 p {
+    text-indent: -2em;
+    margin-left: 2em;
+    counter-increment: calc-ex9;
+}
+.ex9 p:before {
+    content: '\203B'counter(calc-ex9);
+    display: inline-block;
+    width: 2em;
+    text-indent: 0;
+}
+.ex10 p {
+    text-indent: -2em;
+    margin-left: 2em;
+    counter-increment: calc-ex10;
+}
+.ex10 p:before {
+    content: '['counter(calc-ex10, upper-latin)']';
+    display: inline-block;
+    width: 2em;
+    text-indent: 0;
+}
+.ex11 p {
+    position: relative;
+    margin-left: 1em;
+}
+.ex11 p:before {
+    content: '※';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1em;
+    width: 1em;
+}
+.ex12 p {
+    position: relative;
+    margin-left: 1.5em;
+}
+.ex12 p:before {
+    content: '※';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -1.5em;
+    width: 1em;
+    margin-top: -.8em;
+}
+.ex13 p {
+    position: relative;
+    padding: 10px 10px 10px 2em;
+}
+.ex13 p:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.7em;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    border-top: #ddd 3px solid;
+    border-right: #ddd 3px solid;
+    transform: rotate(45deg);
+}
+.ex14 p {
+    font-size: 24px;
+}
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<h2 id="sample01">sample1</h2>
+<div class="sample ex1">
+    <p>※ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+</div>
+
+<h2 id="sample02">sample2</h2>
+<div class="sample ex2">
+    <p><span>*</span>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+</div>
+
+<h2 id="sample03">sample3</h2>
+<div class="sample ex3">
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+</div>
+
+<h2 id="sample04">sample4</h2>
+<div class="sample ex4">
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+</div>
+
+<h2 id="sample05">sample5</h2>
+<div class="sample ex5">
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+</div>
+
+<h2 id="sample06">sample6</h2>
+<div class="sample ex6">
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+</div>
+
+<h2 id="sample07">sample7</h2>
+<div class="sample ex7">
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+</div>
+
+<h2 id="sample08">sample8</h2>
+<div class="sample ex8">
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+</div>
+
+<h2 id="sample09">sample9</h2>
+<div class="sample ex9">
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+</div>
+
+<h2 id="sample10">sample10</h2>
+<div class="sample ex10">
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+</div>
+
+<h2 id="sample11">sample11</h2>
+<div class="sample ex11">
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+</div>
+
+<h2 id="sample12">sample12</h2>
+<div class="sample ex12">
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+</div>
+
+<h2 id="sample13">sample13</h2>
+<div class="sample ex13">
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+</div>
+
+<h2 id="sample14">sample14</h2>
+<div class="sample ex13 ex14">
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+</div>
+
+
+</body>
+</html>
